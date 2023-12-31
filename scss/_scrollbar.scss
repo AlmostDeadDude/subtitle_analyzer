@@ -1,0 +1,31 @@
+/* scrollbar custom view */
+/* width */
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $dark;
+    visibility: hidden;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $medium;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: $medium;
+  }
+  
+  ::-webkit-scrollbar-corner{
+    background: $dark;
+    visibility: hidden;
+  }
+  
+  :root {
+    scrollbar-width: thin !important;
+    scrollbar-color:  $medium $light2 !important;
+  }
