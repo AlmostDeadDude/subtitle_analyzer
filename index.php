@@ -1,9 +1,3 @@
-<?php 
-//read the ini file with the api key first 
-$APIini = parse_ini_file("APIKEY.ini.php");
-$APIKEY = $APIini['token'];
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
