@@ -1,3 +1,9 @@
+<?php 
+//read the ini file with the api key first 
+$APIini = parse_ini_file("APIKEY.ini.php");
+$APIKEY = $APIini['token'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,9 +27,9 @@
 <body>
     <header class="central column">
         <picture>
-            <source type="image/avif" srcset="res/img/sipscript.avif">
-            <source type="image/webp" srcset="res/img/sipscript.webp">
-            <img id="logo" decoding="async" loading="lazy" src="res/img/sipscript.png"  alt="SipScript"/>
+            <source type="image/avif" srcset="res/img/SipScript.avif">
+            <source type="image/webp" srcset="res/img/SipScript.webp">
+            <img id="logo" decoding="async" loading="lazy" src="res/img/SipScript.png"  alt="SipScript"/>
         </picture>
         <p>
             Upload any movie's subtitles, and discover the perfect words for a personalized drinking game.
