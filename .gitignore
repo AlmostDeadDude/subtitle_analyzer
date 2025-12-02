@@ -3,3 +3,13 @@ flask_app.py
 APIKEY.ini.php
 /res/favicon_package_v0.16.zip
 .env/
+.vscode/
+/.idea/
+__pycache__/
+*.pyc
+
+# Local build sources not needed in deploy
+scss/
+.sass-cache/
+/.venv/
+/venv/

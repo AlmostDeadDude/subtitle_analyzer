@@ -5,6 +5,7 @@ import spacy
 import sys
 import os
 import json
+from typing import Optional
 
 def check_subs(subtitlesFile, lang):
     subtitle_generatorTest = srt.parse('''\
@@ -160,9 +161,41 @@ def check_subs(subtitlesFile, lang):
             # print(f"Word: {word}, Frequency: {word_counts[word]}, Timestamps: {word_timestamps[word]}")
             output.append({"word": word, "pos": pos, "frequency": word_counts[word], "timestamps": word_timestamps[word], "starts": word_starts[word]})
     return(json.dumps({"status": "success", "message": output}).strip())
-            
+
+def export_analysis(subtitles_file: str, lang: str, output_path: str) -> Optional[int]:
+    """
+    Run the analysis once and write the JSON output to a file for demo use.
+    Returns None on success, or an exit code on failure.
+    """
+    if not os.path.isfile(subtitles_file):
+        print(json.dumps({"status": "error", "message": f"Input file not found: {subtitles_file}"}))
+        return 1
+    try:
+        result_json = check_subs(subtitles_file, lang)
+    except Exception as exc:
+        print(json.dumps({"status": "error", "message": f"Processing failed: {exc}"}))
+        return 1
+
+    try:
+        with open(output_path, "w", encoding="utf-8") as f:
+            f.write(result_json)
+    except OSError as exc:
+        print(json.dumps({"status": "error", "message": f"Could not write output: {exc}"}))
+        return 1
+
+    print(json.dumps({"status": "success", "message": f"Wrote analysis to {output_path}"}))
+    return None
 
 if __name__ == "__main__":
+    # Export mode to precompute demo JSON files:
+    # python main.py --export path/to/sample.srt en data/samples/sample.json
+    if len(sys.argv) == 5 and sys.argv[1] == "--export":
+        _, _, srt_path, language, output_path = sys.argv
+        exit_code = export_analysis(srt_path, language, output_path)
+        if exit_code is not None:
+            sys.exit(exit_code)
+        sys.exit(0)
+
     if len(sys.argv) != 5:
         # python or python3
         # print("Count of arguments detected: " + str(len(sys.argv)))
