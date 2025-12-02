@@ -20,7 +20,7 @@ There is also the `API-backend-version` branch. This version calls an API endpoi
 
 ## Example Movies
 
-To get you started, here are a few classic movies you can use for testing:
+To get you started, here are a few classic movies you can use for testing with results already generated:
 
 -   The Godfather `subs/GodFather.srt` -> `data/samples/godfather.json`
 -   Pulp Fiction `subs/PulpFiction.srt` -> `data/samples/pulpfiction.json`
