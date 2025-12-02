@@ -5,9 +5,11 @@ SipScript is a fun and interactive tool that enhances your movie nights by turni
 ## Getting Started
 
 ### Local Usage
+
 The `main` branch calls the Python backend on your machine.
 
 ### API Usage
+
 There is also the `API-backend-version` branch. This version calls an API endpoint instead. Normally works much slower. The website uses this version.
 
 ## How It Works
@@ -18,4 +20,8 @@ There is also the `API-backend-version` branch. This version calls an API endpoi
 
 ## Example Movies
 
-To get you started, here are a few classic movies you can use for testing
+To get you started, here are a few classic movies you can use for testing:
+
+-   The Godfather `subs/GodFather.srt` -> `data/samples/godfather.json`
+-   Pulp Fiction `subs/PulpFiction.srt` -> `data/samples/pulpfiction.json`
+-   The Big Lebowski `subs/TheBigLebowski.srt` -> `data/samples/thebiglebowski.json`
