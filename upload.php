@@ -12,7 +12,7 @@ $name = $file['name'];
 $type = $file['type'];
 
 // The size, in bytes, of the uploaded file
-$size = $file['size'];    
+$size = $file['size'];
 
 // The temporary filename of the file in which the uploaded file was stored on the server
 $tmp_name = $file['tmp_name'];
@@ -22,7 +22,7 @@ $error = $file['error'];
 
 //prepare the uploaded file info for the python script
 //check for errors
-$phpFileUploadErrors = array(
+$phpFileUploadErrors = [
     0 => 'There is no error, the file uploaded with success',
     1 => 'The uploaded file exceeds the upload_max_filesize directive in php.ini',
     2 => 'The uploaded file exceeds the MAX_FILE_SIZE directive that was specified in the HTML form',
@@ -31,7 +31,7 @@ $phpFileUploadErrors = array(
     6 => 'Missing a temporary folder',
     7 => 'Failed to write file to disk.',
     8 => 'A PHP extension stopped the file upload.',
-);
+];
 
 //if error is not 0, then return the error message in json format with status and message fields
 if ($error !== 0) {
@@ -54,4 +54,3 @@ $output = shell_exec(".\.env\Scripts\python.exe main.py $name $size $tmp_name $l
 // fclose($myfile);
 
 echo trim($output);
-?>

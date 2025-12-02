@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,12 +19,13 @@
     <link rel="stylesheet" href="css/style.css">
     <title>SipScript</title>
 </head>
+
 <body>
     <header class="central column">
         <picture>
             <source type="image/avif" srcset="res/img/SipScript.avif">
             <source type="image/webp" srcset="res/img/SipScript.webp">
-            <img id="logo" decoding="async" loading="lazy" src="res/img/SipScript.png"  alt="SipScript"/>
+            <img id="logo" decoding="async" loading="lazy" src="res/img/SipScript.png" alt="SipScript" />
         </picture>
         <p>
             Upload any movie's subtitles, and discover the perfect words for a personalized drinking game.
@@ -40,7 +42,9 @@
                 </div>
                 <br>
                 <div class="inputGroup central column">
-                    <label for="lang"><h2>Select language:</h2></label>
+                    <label for="lang">
+                        <h2>Select language:</h2>
+                    </label>
                     <select name="lang" id="lang">
                         <option value="en" selected>English</option>
                         <option value="de">German</option>
@@ -49,7 +53,7 @@
                     </select>
                 </div>
                 <div class="inputGroup central column">
-                    <input type="submit" value="Select the file first" disabled/>
+                    <input type="submit" value="Select the file first" disabled />
                 </div>
             </form>
             <div class="central">
@@ -81,17 +85,17 @@
                 <picture>
                     <source type="image/avif" srcset="res/img/godfather_sm.avif">
                     <source type="image/webp" srcset="res/img/godfather_sm.webp">
-                    <img id="godfather_link" decoding="async" loading="lazy" src="res/img/godfather_sm.png"  alt="godfather"/>
+                    <img id="godfather_link" decoding="async" loading="lazy" src="res/img/godfather_sm.png" alt="godfather" />
                 </picture>
                 <picture>
                     <source type="image/avif" srcset="res/img/pulpfiction_sm.avif">
                     <source type="image/webp" srcset="res/img/pulpfiction_sm.webp">
-                    <img id="pulpfiction_link" decoding="async" loading="lazy" src="res/img/pulpfiction_sm.png"  alt="pulpfiction"/>
+                    <img id="pulpfiction_link" decoding="async" loading="lazy" src="res/img/pulpfiction_sm.png" alt="pulpfiction" />
                 </picture>
                 <picture>
                     <source type="image/avif" srcset="res/img/lebowski_sm.avif">
                     <source type="image/webp" srcset="res/img/lebowski_sm.webp">
-                    <img id="lebowski_link" decoding="async" loading="lazy" src="res/img/lebowski_sm.png"  alt="lebowski"/>
+                    <img id="lebowski_link" decoding="async" loading="lazy" src="res/img/lebowski_sm.png" alt="lebowski" />
                 </picture>
             </div>
         </section>
@@ -116,14 +120,15 @@
     <button id="backToTop" title="back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
-    <footer>        
+    <footer>
         <small>
-            <span id="year">2023</span>, Ivan Shiller <a href="https://github.com/AlmostDeadDude" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a> 
-        </small> 
+            <span id="year">2023</span>, Ivan Shiller <a href="https://github.com/AlmostDeadDude/subtitle_analyzer" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+        </small>
     </footer>
 
     <script src="js/script.js"></script>
     <script src="js/upload.js"></script>
     <script src="js/wordcloud2.js"></script>
 </body>
+
 </html>
