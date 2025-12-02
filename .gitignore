@@ -8,6 +8,7 @@ APIKEY.ini.php
 __pycache__/
 *.pyc
 .git/
+.htaccess
 
 # Local build sources not needed in deploy
 scss/
